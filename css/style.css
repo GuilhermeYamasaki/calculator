@@ -22,8 +22,8 @@ body {
     flex-direction: column;
 }
 
-#calcul h3 {
-    font-size: .8em;
+#calc h3 {
+    font-size: 0.8em;
     font-weight: 300;
     color: #666;
 }
@@ -56,7 +56,7 @@ body {
 #buttons-container button {
     border: 1px solid transparent;
     border-radius: 0;
-    height: 4cm;
+    height: 4em;
     font-size: 1.2em;
     background-color: #dbdbdb;
     cursor: pointer;
@@ -73,7 +73,7 @@ body {
 
 #buttons-container #equal-btn{
     grid-column: span 2;
-    background-color: #75a7cb;
+    background-color: #75a5cb;
 }
 
 #buttons-container #equal-btn:hover{
