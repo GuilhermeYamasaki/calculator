@@ -54,7 +54,7 @@ class Calculator {
                 this.updateScreen(operationValue, operation, current, previous)
                 break
             case "DEL":
-                this.processDelOperator()
+                this.processDeleteOperator()
                 break
             case "CE":
                 this.processClearCurrentOperator()
@@ -98,9 +98,8 @@ class Calculator {
     }
 
     // deleta um numero
-    processDelOperator() {
-        this.currentOperationText.innerText =
-            this.currentOperationText.innerText.slice(0, -1)
+    processDeleteOperator() {
+        this.currentOperationText.innerText = this.currentOperationText.innerText.slice(0, -1)
     }
 
     // Limpa a operação atual
@@ -108,7 +107,6 @@ class Calculator {
         this.currentOperationText.innerText = ""
     }
 
-    // Limpar a operações
     processClearOperator() {
         this.currentOperationText.innerText = ""
         this.previousOperationText.innerText = ""
@@ -117,7 +115,6 @@ class Calculator {
     // Processa a operação
     processEqualOperator() {
         let operation = this.previousOperationText.innerText.split(" ")[1]
-
         this.processOperation(operation)
     }
 }
@@ -127,7 +124,7 @@ const calc = new Calculator(previousOperationText, currentOperationText)
 
 buttons.forEach((btn) => { //botão = btn e cada btn vai ter evento click e seu objeto (e)
     btn.addEventListener("click", (e) => {
-        const valueText = e.target.innerText //pegar valor do que a pessoa selecionou
+        const valueText = e.target.innerText //pegar o que a pessoa selecionou na calculadora
 
         if (+valueText >= 0 || valueText === ".") {
             console.log(valueText)
